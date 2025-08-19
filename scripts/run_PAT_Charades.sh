@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 export PATH=/pytorch_env/bin:$PATH
 
-python ../train_PAT.py \
+python ../Train_PAT_Charades.py \
 -dataset charades \
 -mode rgb \
 -model PAT \
