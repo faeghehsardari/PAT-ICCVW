@@ -151,7 +151,7 @@ def run_network(model, data, gpu):
     loss_coarse = new_loss(coarse_probs, labels)/ torch.sum(mask)
     loss_fine =new_loss(fine_probs, labels)/ torch.sum(mask)
 
-    loss = args.coarse_weight * loss_coarse + args.fine_weight * loss_fine
+    loss = loss_coarse + args.fine_weight * loss_fine
 
 
     corr = torch.sum(mask)
